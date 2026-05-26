@@ -1,0 +1,9 @@
+{
+  "data": {
+    "type": "workitems",
+    "attributes": {
+      "title": "Sample Requirement",
+      "description": "Description text"
+    }
+  }
+}

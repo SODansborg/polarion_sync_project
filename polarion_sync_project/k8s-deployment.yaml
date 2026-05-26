@@ -1,0 +1,20 @@
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sync-service
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: sync
+  template:
+    metadata:
+      labels:
+        app: sync
+    spec:
+      containers:
+      - name: sync
+        image: sync:latest
+        ports:
+        - containerPort: 8080
