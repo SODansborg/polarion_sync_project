@@ -1,0 +1,16 @@
+
+version: "3.8"
+services:
+  kafka:
+    image: bitnami/kafka
+    ports: ["9092:9092"]
+  postgres:
+    image: postgres:15
+    environment:
+      POSTGRES_DB: syncdb
+      POSTGRES_USER: sync
+      POSTGRES_PASSWORD: sync
+  neo4j:
+    image: neo4j:5
+    environment:
+      NEO4J_AUTH: neo4j/password
